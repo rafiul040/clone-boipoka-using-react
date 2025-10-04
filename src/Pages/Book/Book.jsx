@@ -1,17 +1,18 @@
 // import React, { use } from 'react';
 import { FaStarHalfAlt } from 'react-icons/fa'
+import { Link } from 'react-router';
 
 
 
 const Book = ({singleBook}) => {
 
 
-    const {bookName, author, image, category, publisher, rating, totalPages, tags} = singleBook
+    const {bookName, bookId, author, image, category, publisher, rating, totalPages, tags} = singleBook
 
-    // const data = use(bookPromise)
-    console.log(singleBook)
 
     return (
+       <Link to={`/bookDetails/${bookId}`}>
+       
        <div className="card bg-white w-96 shadow-sm">
   <figure className='bg-[#f5f5f5] p-5 m-4'>
     <img className='w-[125px] h-[166px]'
@@ -22,7 +23,7 @@ const Book = ({singleBook}) => {
     <div className='flex justify-center gap-5'>
 
     {
-        tags.map(tag => <button className=''>{tag}</button>)
+        tags.map((tag, index) => <button key={index}>{tag}</button>)
     }
     </div>
     <h2 className="card-title">
@@ -44,6 +45,8 @@ const Book = ({singleBook}) => {
     </div>
   </div>
 </div>
+       
+       </Link>
     );
 };
 
