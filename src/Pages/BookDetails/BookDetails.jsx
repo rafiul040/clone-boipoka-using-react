@@ -2,10 +2,10 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { addToStoredDb } from '../../Utilities/addToDb';
 import Swal from 'sweetalert2';
-// import withReactContent from 'sweetalert2-react-content';
+import withReactContent from 'sweetalert2-react-content';
 import { ToastContainer, toast } from 'react-toastify'
 
-// const MySwal = withReactContent(Swal)
+const MySwal = withReactContent(Swal)
 const BookDetails = () => {
 
     const {id} = useParams();
