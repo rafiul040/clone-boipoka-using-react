@@ -19,11 +19,11 @@ const BookDetails = () => {
     const handleMarkAsRead = id => {
 
 
-    //   MySwal.fire({
-    //     title: "Good Job!",
-    //     text: "You Clicked the button!",
-    //     icon: "success"
-    // })
+      MySwal.fire({
+        title: "Good Job!",
+        text: "You Clicked the button!",
+        icon: "success"
+    })
 
 
 
